@@ -1,0 +1,30 @@
+Requirements :- 
+
+Create orders. Order shall have order information and items. 
+Create customers. System shall not allow to add new customer with already existing customer email. 
+Retrieve list of orders based on specific page index and page size.
+
+Table Created in SQL Server:-
+
+Customer 	:-   CustomerId (Primary Key), CustomerName, Emial
+Product	:- 	ProductId(Primary Key), Name, Price
+Order 	:- 	OrderId, CustomerId(Foreign Key), ProductId(Foreign Key), quantity, amount
+
+
+Created above tables in SQL server
+Created Web API Project with name OrderingSystem
+Added new Model using entity framework.
+Created Costumer Controller and added methods to Register customer where system will not allow to add with existing customer email id and also created methods to get all customers and get customers with specific Customer ID.
+Created Product Controller and added methods to Get a product specific to product name and get all products.
+Created Order customer and added methods to get orders placed specific to the customer and to get all orders placed by all customers and also used pagination to retrieve list of orders based on specific to page index and page size. 
+Created new project to do Unit Testing
+Created Test context class. Since we cannot got to DB context while doing unit testing.
+Created separate DB set classes for both Customer and Order entities.
+Created a app context class to create a repository of IOrderRepository by inheriting it.
+Created a TestClass for Customer controller and created test methods.
+Created a TestCalss for Order controller and created test methods.
+
+
+
+
+
